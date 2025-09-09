@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price AI Vision</title>
+
+</head>
+<body>
+    <div>
+        <img class="img" src="https://png.pngtree.com/thumb_back/fh260/background/20220603/pngtree-doctor-working-in-hospital-with-other-doctors-stethoscope-hospitals-senior-photo-image_46292788.jpg" alt="doctor"/>
+        <header>
+        <h1 class="a">Price AI Vision</h1>
+        <nav>
+            <button style="background-color: black;color:white;border-radius:10%;">Become a vendor</button>
+            <button style="background-color: black;color:white;border-radius:10%;">Compare</button>
+            <button style="background-color: black;color:white;border-radius:10%;">Services</button>
+            <button style="background-color: black;color:white;border-radius:10%;">Get Location</button>
+            <button style="background-color: black;color:white;border-radius:10%;">Login/Signup</button>
+        </nav>
+        </header>
+    </div>
+    <div class="search-container">
+        <input class="b" style="height:30px; width:500px;" type="text" placeholder="Enter Hospital Name..">
+        <button class="searchbutton">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.KhauRVwQCJvaznEZuXGUCAHaHa?pid=Api&P=0&h=180" alt="search" width=20 height=20>
+        </button>
+        <button class="microphone">
+        <img src="https://vectorified.com/images/voice-icon-11.png" alt="mic" width="20" height="20">    
+        </button>
+        <button class="location">
+        <img src="https://static.vecteezy.com/system/resources/previews/008/659/092/original/eps10-blue-pin-point-or-location-solid-icon-for-website-ui-and-mobile-isolated-on-white-background-free-vector.jpg"  alt="location" width="20" height="20">   
+        </button>
+        </div>
+    <style>
+        header{
+            margin-left: 1060px;
+            margin-top: -200px;
+        }
+        .a{
+            margin-left:-1050px;
+            margin-top:-150px;
+        }
+        nav{
+            margin-top:-50px;
+            margin-left:30px;
+            background-color: black;
+            color: white;
+        }
+        .search-container{
+            margin-left:450px;
+            margin-top:50px;
+            background-color: white;
+            padding:5px 10px;
+            border:4px solid white;
+            border-radius:30px;
+        }
+        .img{
+            width:1590px;
+            height:200px;
+            margin-top:0px;
+        }
+        header nav{
+            display:flex;
+            gap: 10px;
+        }
+        .search-container button {
+         cursor: pointer;
+         padding: 1px;
+         border-radius: 10%;
+        }
+        .search-container button img{
+         width:22px;
+         height:22px;
+        }
+        .cat {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 5px;
+      width: 350px;
+      height: 400px;
+      box-shadow: 0 2px 5px black;
+        }
+        .cat h3{
+            margin:0 0 10px;
+            text-align:center;
+        }
+        .image-grid{
+            display:grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap:-1px;
+        }
+        .image-grid div{
+            text-align: center;
+        }
+        .image-grid img {
+      object-fit:cover;
+      border-radius: 6px;
+       width:150px;
+      height:100px;
+    }
+    .image-grid p {
+      margin: 5px 0;
+      font-size: 13px;
+      width:-50px;
+      height:20px;
+    }
+    .image-grid p.price {
+      color: green;
+      font-weight: bold;
+    }
+   .grid{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+   }
+   .section{
+    margin-top:70px;
+   }
+   .services {
+      display: flex;
+      justify-content: center;
+      gap:30px;
+      padding: 0 40px;
+    }
+
+    .ser {
+      background:white;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+    .ser img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .ser p.price {
+          color: green;
+          font-weight: bold;
+        }
+      .ser-con {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      }
+      
+    
+    .hospitals {
+      display: flex;
+      justify-content: center;
+      gap:30px;
+    }
+
+    .hosp {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding:5px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .hosp img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+     .hospitals .hosp img:hover{
+      transform: scale(1.2);
+    }
+    .hosp .hos-grid p {
+      margin: 2px 0;
+      font-size: 13px;
+   } 
+   .hospitals .hosp .hos-grid :hover{
+    transform: scale(1.2);
+   }
+ .hos-con {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 20px;
+    box-shadow: 0 2px 5px black;
+      } 
+      .ser:hover{
+        transform: scale(1.2);
+      }
+      .hover:hover{
+        transform: scale(1.2);
+      }
+      .hos-grid address button img{
+        width:10px;
+        height:10px;
+        border-radius:50%;
+      }
+      footer {
+  background: #fff;
+  padding: 30px 40px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-top h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color:darkblue; 
+}
+
+.subscribe-box {
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.subscribe-box button {
+  background:darkblue; 
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.subscribe-box button:hover {
+  background:steelblue;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact h3 {
+  margin-bottom: 10px;
+  color: #002060;
+}
+
+.links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin-bottom: 8px;
+}
+
+.links ul li  {
+  text-decoration: none;
+  color: #002060;
+}
+ @media screen and (max-width: 600px) {
+ }
+
+.links ul li :hover {
+  text-decoration: underline;
+}
+
+    </style>
+    <div class="section">
+    <div class="section-title"><h2><b>Categories</b></h2></div>
+    <div class="flex">
+    <div class="grid">
+        <div class="cat">
+            <h3>Cardiology</h3>
+            <hr>
+            <div class="image-grid">
+          <div class="hover"><img src="C:\Users\DELL\Downloads\OIP 1.jpg""><p>Cardiology</p><p class="price">₹55,000</p></div>
+          <div class="hover"><img src="C:\Users\DELL\Downloads\O7GZDU0.jpg"><p>Cardiology</p><p class="price">₹50,000</p></div>
+          <div class="hover"><img src="C:\Users\DELL\Downloads\cardiologie-concilio-votre-conciergerie-medicale_718x452.jpg"><p>Cardiology</p><p class="price">₹59,000</p></div> 
+          <div class="hover"><img src="https://rammangalhf.com/wp-content/uploads/2021/03/cardiology1-1.jpeg"><p>Cardiology</p><p class="price">₹61,000</p></div>  
+        </div>
+        </div>
+        <div class="cat">
+            <h3>Neurology</h3>
+            <hr>
+            <div class="image-grid">
+          <div class="hover"><img src="C:\Users\DELL\Downloads\OIP.jpg"><p>Neurology</p><p class="price">₹55,000</p></div>
+          <div class="hover"><img src="https://tse3.mm.bing.net/th/id/OIP.7WikaJ_Vxq97ajTRoPGX_gHaE8?pid=Api&P=0&h=180"><p>Neurology</p><p class="price">₹50,000</p></div>
+          <div class="hover"><img src="https://s3-us-west-2.amazonaws.com/utsw-patientcare-web-production/original_images/neurology-neurotherapeutics-utsw-banner-1600x732.jpg"><p>Neurology</p><p class="price">₹59,000</p></div> 
+          <div class="hover"><img src="https://img.freepik.com/premium-photo/neurology-science-hd-8k-wallpaper-stock-photographic-image_915071-53601.jpg"><p>Neurology</p><p class="price">₹61,000</p></div>  
+    </div> 
+    </div>     
+         <div class="cat">
+            <h3>Oncology</h3>
+            <hr>
+            <div class="image-grid">
+          <div class="hover"><img src="C:\Users\DELL\Downloads\OIP (2).jpg"><p>Oncology</p><p class="price">₹55,000</p></div>
+          <div class="hover"><img src="https://www.pihpng.com/wp-content/uploads/2024/01/oncology.jpg"><p>Oncology</p><p class="price">₹50,000</p></div>
+          <div class="hover"><img src="https://www.boldbusiness.com/wp-content/uploads/2018/12/ONCOLOGY-TREATMENT_Featured.jpg"><p>Oncology</p><p class="price">₹59,000</p></div> 
+          <div class="hover"><img src="https://miro.medium.com/v2/resize:fit:640/0*PO28Lux_E7Yhr7Wx.jpg"><p>Oncology</p><p class="price">₹61,000</p></div>  
+    </div>  
+    </div>
+    <div class="cat">
+            <h3>Orthopedics</h3>
+            <h>
+            <div class="image-grid">
+          <div class="hover"><img src="https://chicagohealthonline.com/wp-content/uploads/2017/08/Orthopedics.F17-1-e1504818928899.jpg"><p>Orthopedics</p><p class="price">₹55,000</p></div>
+          <div class="hover"><img src="https://www.medicarespots.com/wp-content/uploads/2020/12/Top-Orthopedic-Doctors-In-India.png"><p>Orthopedics</p><p class="price">₹50,000</p></div>
+          <div class="hover"><img src="https://iihrc.com/wp-content/uploads/2020/12/Orthopedics.jpg"><p>Orthopedics</p><p class="price">₹59,000</p></div> 
+          <div class="hover"><img src="https://tse2.mm.bing.net/th/id/OIP.IHbOflTxwo0quUqKgJJBmAHaE7?pid=Api&P=0&h=180"><p>Orthopedics</p><p class="price">₹61,000</p></div>  
+    </div>  
+    </div>   
+    </div> 
+    <br><br>
+    <hr>
+    <div class="section-title"><h2><b>Recommended Services</b></h2></div>
+    <div class="ser-con">
+    <div class="services">
+         <div class="ser"><img src="https://tse2.mm.bing.net/th/id/OIP.FATFGY59PMMzZDZFo96TMQHaEJ?pid=Api&P=0&h=180"><p>Cardiology</p><p>Code:SC1262</p><p class="price">₹55,000</p></div> 
+         <div class="ser"><img src="https://tse2.mm.bing.net/th/id/OIP.YqOO48CT1DKdVTUxSr98TAHaE8?pid=Api&P=0&h=180"><p>Neurology</p><p>Code:SC1272</p><p class="price">₹55,000</p></div>
+         <div class="ser"><img src="https://apponcologysummit.org/wp-content/uploads/2022/04/Cells-CV.jpg"><p>Oncology</p><p>Code:SC1282</p><p class="price">₹55,000</p></div>
+         <div class="ser"><img src="https://tse3.mm.bing.net/th/id/OIP.SyEgFbdT2cbBBvjE0ObpJgHaHa?pid=Api&P=0&h=180"><p>Orthopedics</p><p>Code:SC1292</p><p class="price">₹55,000</p></div>
+         <div class="ser"><img src="https://thumbs.dreamstime.com/z/doctor-explores-human-stomach-concept-design-88579571.jpg"><p>Gastroenterology</p><p>Code:SC1302</p><p class="price">₹55,000</p></div>
+         <div class="ser"><img src="https://tse4.mm.bing.net/th/id/OIP.1Nbik8Kh-wnwASjNeI-5OwHaD3?pid=Api&P=0&h=180"><p>Cardiology</p><p>Code:SC1312</p><p class="price">₹55,000</p></div>
+    </div> 
+    </div><br>
+    <hr>
+    <div class="hos-con">
+    <div class="section-title"><h2><b>Most Popular Hospitals</b></h2></div>
+    <div class="hospitals">
+    <div class="hosp"><img src="https://tse3.mm.bing.net/th/id/OIP.TO-G6_pCxCI7sORrQrq2GwHaE6?pid=Api&P=0&h=180"><h3><b>Alpha Hospital</b></h3>
+    <div class="hos-grid">
+       <div><p>Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹55,000</span></p></div><hr>
+       <div><p>Neurology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹43,000</span></p></div><hr>
+       <div><p>Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹51,000</span></p></div><hr>
+       <div><p>Orthopedics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div><hr>
+       <div><p>Nephrology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div><hr>
+       <div><p>Pulmonology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div><hr>
+        <p>📍 NH-16, Kanakamamidi Center,Ongole, Ap-523002</p>
+        </div>
+        </div>
+        
+    <div class="hospitals">
+    <div class="hosp"><img src="http://medifyhome.com/wp-content/uploads/2024/04/Screenshot-2024-04-05-153650.png"><h3><b>Sai Sanjeevini Multi-Speciality Hospital</b></h3>
+    <div class="hos-grid">
+       <div><p>Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹50,000</span></p></div><hr>
+       <div><p>Neurology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹33,000</span></p></div><hr>
+       <div><p>Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹46,000</span></p></div><hr>
+       <div><p>Orthopedics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹64,000</span></p></div><hr>
+       <div><p>Nephrology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹33,000</span></p></div><hr>
+       <div><p>Pulmonology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹81,000</span></p></div><hr>
+        <p>📍 NH-16, Kanakamamidi Center,Ongole, Ap-523002</p>
+    </div>
+    </div>
+    <div class="hospitals">
+    <div class="hosp"><img src="https://i.ytimg.com/vi/LabJNjJ98b0/maxresdefault.jpg"><h3><b>Prasad Hospital</b></h3>
+    <div class="hos-grid">
+       <div><p>Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹59,000</span></p></div><hr>
+       <div><p>Neurology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹43,000</span></p></div><hr>
+       <div><p>Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹52,000</span></p></div><hr>
+       <div><p>Orthopedics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹59,000</span></p></div><hr>
+       <div><p>Nephrology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹60,000</span></p></div><hr>
+       <div><p>Pulmonology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹89,000</span></p></div><hr>
+        <p>📍 NH-16, Kanakamamidi Center,Ongole, Ap-523002</p>
+    </div>
+    </div>
+    <div class="hospitals">
+    <div class="hosp"><img src="https://www.bookdronline.com/wp-content/uploads/2023/05/Sai-Sudha-Hospital-Kakinada-Doctors-List.jpg"><h3><b>Sai Sudha Hospital</b></h3>
+    <div class="hos-grid">
+       <div><p>Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹61,000</span></p></div><hr>
+       <div><p>Neurology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹75,000</span></p></div><hr>
+       <div><p>Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹48,000</span></p></div><hr>
+       <div><p>Orthopedics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹61,000</span></p></div><hr>
+       <div><p>Nephrology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div><hr>
+       <div><p>Pulmonology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹92,000</span></p></div><hr>
+        <p>📍 NH-16, Kanakamamidi Center,Ongole, Ap-523002</p>
+
+    </div>
+    </div>
+    <div class="hospitals">
+    <div class="hosp"><img src="https://www.medicoverhospitals.in/images/about/kurnool-medicover-hospitals.jpg"><h3><b>Medicover Hospital</b></h3>
+    <div class="hos-grid">
+       <div><p>Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹55,000</span></p></div><hr>
+       <div><p>Neurology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹43,000</span></p></div><hr>
+       <div><p>Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹51,000</span></p></div><hr>
+       <div><p>Orthopedics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div> <hr>
+       <div><p>Nephrology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div> <hr>
+       <div><p>Pulmonology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green">₹65,000</span></p></div><hr>
+        <p>📍 NH-16, Kanakamamidi Center,Ongole, Ap-523002</p>
+    </div>
+    </div>
+    </div>   
+    </div>
+    </div>
+    </div>
+    </div>
+  </div></div></div>
+    <footer>
+       <div class="footer-top">
+    <h2>Price AI vision Jatayu4</h2>
+    <div class="subscribe-box">
+      <input type="email" placeholder="Enter mail">
+      <button>Subscribe</button>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-bottom">
+    <div class="contact">
+      <h3>Contact Details</h3>
+      <p>👤 VARIKALLU BINDHU MADHAVI</p>
+      <p>📞 +91 949409****</p>
+      <p>🏫 AmritaSai Institute Of Science and technology</p>
+      <p>📍 Paritala, AP - 522231
+    </div>
+    <div class="links">
+      <ul>
+        <li>About us</li>
+        <li>Privacy & policy</li>
+        <li>Terms & conditions</li>
+      </ul>
+    </div>
+  </div>
+    </footer>
+    
+    </body>
+</html>
